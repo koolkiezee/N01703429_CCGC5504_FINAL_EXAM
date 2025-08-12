@@ -1,0 +1,17 @@
+name: Build and Push Docker Image  # The name of your robot!
+
+on:
+  push:
+    branches: [ "main" ]  # The robot wakes up when you push to main!
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # The robot runs on a Linux playground.
+    steps:
+    - uses: actions/checkout@v3  # First, it grabs your drawings.
+    - name: Build Docker image  # Then it packs your lunchbox.
+      run: docker build -t YOUR_DOCKERHUB_USERNAME/N01703429-nginx:latest .
+    - name: Login to Docker Hub  # It logs into Docker Hub (like a secret club).
+      run: echo "${{ secrets.RajivRohan28! }}" | docker login -u "${{ secrets.Koolkiezee }}" --password-stdin
+    - name: Push Docker image  # Finally, it sends the lunchbox to the cloud!
+      run: docker push Koolkiezee/N01703429-nginx:latest
