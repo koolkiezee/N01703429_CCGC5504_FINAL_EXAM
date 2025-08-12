@@ -1,0 +1,4 @@
+apiVersion: v2
+name: my-website
+description: My N01703429 website
+version: 0.1.0
